@@ -1,0 +1,51 @@
+#if
+
+#O if é uma estrutura de condição que permite avaliar uma expressão e, de acordo com seu resultado, executar uma determinada ação.
+#No código a seguir temos um exemplo de uso do if no qual verificamos se a variável idade é menor que 20. Em caso positivo, imprimimos uma mensagem na tela e em caso negativo o código seguirá normalmente, desconsiderando a linha 3.
+
+#1 idade = 18
+#2 if idade < 20:
+#3   print(‘Você é jovem!’)
+#Como podemos notar, essa estrutura é formada pela palavra reservada if, seguida por uma condição e por dois pontos (:).
+
+#As linhas abaixo dela formam o bloco de instruções que serão executadas se a condição for atendida. Para isso,
+    #elas devem ser identadas corretamente, respeitando a especificação do Python. Nesse código, apenas a instrução
+   # da linha 3 é executada, e por isso ela está mais avançada. Se fosse necessária a execução de outras linhas no
+   # caso da idade ser menor que 20, elas também deveriam estar no mesmo nível de identação da linha 3.
+
+#if-else
+
+#Vimos anteriormente como utilizar o if para executar uma ação caso uma condição seja atendida.
+#No entanto, nenhum comportamento específico foi definido para o caso de a condição não ser satisfeita.
+#Quando isso é necessário, precisamos utilizar a reservada else.
+
+#1 idade = 18
+#2 if idade >= 18:
+#3      print('maior de idade')
+#4 else:
+#5      print('menor de idade')
+
+#Dessa vez, caso a condição avaliada na linha 3 não seja atendida, definimos o fluxo alternativo que o código deve seguir.
+#Ou seja, se a idade não for maior ou igual a 18, o bloco abaixo da palavra reservada else deverá ser executado. Nesse caso,
+#temos apenas uma instrução de impressão (linha 5).
+
+#if-elif-else
+
+#Adicionalmente, se existir mais de uma condição alternativa que precisa ser verificada, devemos utilizar o elif para avaliar as
+#expressões intermediárias antes de usar o else, da seguinte forma:
+
+#1 idade = 18
+#2 if idade < 12:
+#3             print('criança')
+#4 elif idade < 18:
+#5             print('adolescente')
+#6 elif idade < 60:
+#7             print(adulto')
+#8 else:
+#9             print('idoso')
+
+#Na linha 2 definimos a primeira condição (idade < 12). Caso essa não seja atendida, o programa seguirá para a linha 4 e avaliará
+#a próxima condição (elif), que se for verdadeira fará com que o bloco logo abaixo (a linha 5, nesse caso) seja executado.
+#Caso essa condição ainda não seja atendida (elif), há uma outra alternativa na linha 6 que será avaliada e que fará com que o bloco
+#logo abaixo seja executado se ela for atendida. Por fim, se nenhuma das condições for satisfeita, o programa seguirá para a linha 8,
+#executando o que é definido pelo else.
